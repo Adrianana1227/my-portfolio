@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="portfolio.png">
+    <title>Portfolio Website</title>
+    <link rel="stylesheet" href="Aboutmestyle.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f7fc;
+        }
+
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .navbar {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            padding: 0;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .img-box {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .img-box img {
+            width: 150px;
+            height: auto;
+            border-radius: 50%;
+            border: 2px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .img-box img:hover {
+            transform: scale(1.05);
+        }
+
+        h1, h2, h3 {
+            text-align: center;
+            color: #2c3e50;
+        }
+
+        p {
+            text-align: justify;
+            color: #555;
+        }
+
+        .footer {
+            text-align: center;
+            background: #2c3e50;
+            color: white;
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+
+        .footer .social a, .footer .list a {
+            color: #61dafb;
+            text-decoration: none;
+            margin: 0 15px;
+        }
+
+        .footer .social a:hover, .footer .list a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer Links - Display them horizontally */
+        .footer .list {
+            display: flex;
+            justify-content: center;
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .footer .list li {
+            margin: 0 15px;
+        }
+
+        /* Lightbox Styles */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+        }
+
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+
+        .lightbox.active {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+
+<header class="header">
+    <a href="Dayangazrahumrah.html" class="logo"><span>Portfolio</span> Websites</a>
+    <nav class="navbar">
+        <a href="Dayangazrahumrah.html" class="active">Home</a>
+        <a href="About%20me.html">About Me</a>
+        <a href="galery.html">Gallery</a>
+        <a href="edu&ach.html">Education Background</a>
+        <a href="DygAzrahUmrah.html">Contact</a>
+    </nav>
+</header>
+
+<div class="container">
+    <div class="img-box">
+        <img src="Dyg%202.jpeg" alt="Profile Picture" id="thumbnail">
+    </div>
+    <h1>ABOUT ME</h1>
+    <h2>Hello!</h2>
+    <h3>My name</h3>
+    <h3>is Dayang Azrah Umrah Binti Awang Azmi</h3>
+    <p>I am currently a student at University Technology MARA Sarawak Branch, majoring in Office And Technology Management. I have a passion for Office And Technology Management and I am dedicated to pursuing excellence in my academic and extracurricular endeavors.</p>
+    <p>In my free time, I enjoy doing my hobbies, which help me to unwind and stay balanced. Whether it's dancing or singing, I always make time for activities that bring me joy and relaxation.</p>
+    <p>Looking ahead, I aspire to be an entrepreneurship woman. I am excited about the possibilities that lie ahead and am eager to apply the knowledge and skills I have gained at University Technology MARA.</p>
+    <p>Warm regards,</p>
+    <p>Dayang Azrah Umrah Binti Awang Azmi</p>
+</div>
+
+<!-- Lightbox for full-size image -->
+<div class="lightbox" id="lightbox">
+    <img src="Dyg%202.jpeg" alt="Full-size Profile Picture">
+</div>
+
+<footer class="footer">
+    <div class="social">
+        <a href="https://www.instagram.com/dazrah_?igsh=b3Q4bG5vcHkyMHow" target="_blank">Instagram</a>
+        <a href="https://www.tiktok.com/@choc_1ov3r?_t=ZS-8sGlE94iYme&_r=1" target="_blank">TikTok</a>
+    </div>
+    <ul class="list">
+        <li><a href="DygAzrahUmrah.html">Home</a></li>
+        <li><a href="About%20me.html">About Me</a></li>
+        <li><a href="galery.html">Gallery</a></li>
+        <li><a href="edu&ach.html">Education</a></li>
+        <li><a href="DygAzrahUmrah.html">Contact</a></li>
+    </ul>
+    <p>&copy; 2025 AlyaAd / All Rights Reserved</p>
+</footer>
+
+<script>
+    // JavaScript for lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const thumbnail = document.getElementById('thumbnail');
+
+    // Show lightbox when the thumbnail is clicked
+    thumbnail.addEventListener('click', () => {
+        lightbox.classList.add('active');
+    });
+
+    // Close lightbox when clicking anywhere outside the image
+    lightbox.addEventListener('click', (event) => {
+        if (event.target === lightbox) {
+            lightbox.classList.remove('active');
+        }
+    });
+</script>
+
+</body>
+</html>
